@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="main-toolbar" [class.scrolled]="isScrolled">
+  <span class="logo">🌶️ ScandiSpice</span>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links" *ngIf="!isMobileMenuOpen">
+    <a mat-button (click)="gohome()" [class.active-link]="isActive('home')">Home</a>
+    <a mat-button (click)="gospices()" [class.active-link]="isActive('spices')">Spices</a>
+    <a mat-button (click)="goblends()" [class.active-link]="isActive('blends')">Blends</a>
+    <a mat-button (click)="gocontact()" [class.active-link]="isActive('contact')">Contact</a>
+  </nav>
+
+  <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- Mobile menu -->
+<mat-nav-list *ngIf="isMobileMenuOpen" class="mobile-menu">
+  <a  routerLink="/" (click)="toggleMenu();gohome()">Home</a>
+  <a  routerLink="/spices" (click)="toggleMenu();gospices()">Spices</a>
+  <a  routerLink="/blends" (click)="toggleMenu();goblends()">Blends</a>
+  <a  routerLink="/contact" (click)="toggleMenu();gocontact()">Contact</a>
+</mat-nav-list>

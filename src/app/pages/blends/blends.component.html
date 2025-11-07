@@ -1,0 +1,16 @@
+<div class="blends-container">
+  <h1 class="page-title">Our Signature Spice Blends</h1>
+  <p class="subtitle">
+    Handcrafted blends made from the finest ingredients — enhancing the taste and aroma of every dish.
+  </p>
+
+  <div class="blends-grid">
+    <mat-card class="blend-card" *ngFor="let blend of blends">
+      <img mat-card-image [src]="blend.image" [alt]="blend.name">
+      <mat-card-content>
+        <h2>{{ blend.name }}</h2>
+        <p>{{ blend.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

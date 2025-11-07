@@ -1,0 +1,13 @@
+<div class="spices-container">
+  <h1 class="page-title">Our Premium Spices</h1>
+
+  <div class="spices-grid">
+    <mat-card class="spice-card" *ngFor="let spice of spices">
+      <img mat-card-image [src]="spice.image" [alt]="spice.name">
+      <mat-card-content>
+        <h2>{{ spice.name }}</h2>
+        <p>{{ spice.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

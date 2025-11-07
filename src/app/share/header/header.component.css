@@ -1,0 +1,97 @@
+.main-toolbar {
+  position: fixed;
+  /* Stick to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Keep above all content */
+  background-color: #fb9700;
+  /* Dark background */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Default - no shadow */
+.main-toolbar:not(.scrolled) {
+  box-shadow: none;
+}
+
+/* When scrolled - subtle elevation */
+.main-toolbar.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #fff;
+  background-color: #e58700;
+}
+
+.menu-btn {
+  color: #fff;
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* Mobile menu container */
+  .mobile-menu {
+    background-color: #efe9e9;
+    /* Light background */
+    padding: 10px 0;
+    position: fixed;
+    top: 64px;
+    /* Below toolbar */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile menu links */
+  .mobile-menu a {
+    color: #0e0d0d !important;
+    /* Override Angular Material default color */
+    font-weight: 500;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    font-size: 18px;
+  }
+
+  /* Hover effect */
+  .mobile-menu a:hover {
+    color: #ff5722 !important;
+    /* Bright hover color */
+    font-size: 19px;
+    transition: all 0.3s ease;
+  }
+}
