@@ -4,10 +4,10 @@
   <span class="spacer"></span>
 
   <nav class="nav-links" *ngIf="!isMobileMenuOpen">
-    <a mat-button (click)="gohome()" [class.active-link]="isActive('home')">Home</a>
-    <a mat-button (click)="gospices()" [class.active-link]="isActive('spices')">Spices</a>
-    <a mat-button (click)="goblends()" [class.active-link]="isActive('blends')">Blends</a>
-    <a mat-button (click)="gocontact()" [class.active-link]="isActive('contact')">Contact</a>
+    <a mat-button (click)="navigateTo('home')" [class.active-link]="isActive('home')">Home</a>
+    <a mat-button (click)="navigateTo('spices')" [class.active-link]="isActive('spices')">Spices</a>
+    <a mat-button (click)="navigateTo('blends')" [class.active-link]="isActive('blends')">Blends</a>
+    <a mat-button (click)="navigateTo('contact')" [class.active-link]="isActive('contact')">Contact</a>
   </nav>
 
   <button mat-icon-button class="menu-btn" (click)="toggleMenu()">

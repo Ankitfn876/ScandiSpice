@@ -17,7 +17,7 @@ export class SpicesComponent {
     {
       name: 'Red Chilli Powder',
       description: 'Adds heat and color to any dish, made from sun-dried red chilies.',
-      image: '/assets/spices/red-chilli.jpg'
+      image: 'assets/spices/red-chilli.jpg'
     },
     {
       name: 'Coriander Powder',
