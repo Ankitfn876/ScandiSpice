@@ -1,24 +1,35 @@
 <mat-toolbar color="primary" class="main-toolbar" [class.scrolled]="isScrolled">
-  <span class="logo">🌶️ ScandiSpice</span>
+  <div class="toolbar-container">
+    <div class="logo-section" (click)="navigateTo('home')">
+      <img [src]="logo" alt="KRADDA Logo" class="logo-img" />
+    </div>
 
-  <span class="spacer"></span>
+    <nav class="nav-links" *ngIf="!isMobileMenuOpen">
+      <!-- <a mat-button (click)="navigateTo('home')" [class.active-link]="isActive('home')">Home</a> -->
+      <a mat-button (click)="scrollToSection('home')">Home</a>
+      <a mat-button (click)="scrollToSection('about')">About Us</a>
+      <a mat-button (click)="scrollToSection('tea')">Tea</a>
+      <a mat-button (click)="scrollToSection('spices')">Spices</a>
+      <a mat-button (click)="scrollToSection('divkit')">Div Kit</a>
+      <a mat-button (click)="scrollToSection('contact')">Contact us</a>
+      <!-- <a mat-button (click)="navigateTo('spices')" [class.active-link]="isActive('spices')">Spices</a> -->
+      <!-- <a mat-button (click)="navigateTo('blends')" [class.active-link]="isActive('blends')">Blends</a> -->
+     
+    </nav>
 
-  <nav class="nav-links" *ngIf="!isMobileMenuOpen">
-    <a mat-button (click)="navigateTo('home')" [class.active-link]="isActive('home')">Home</a>
-    <a mat-button (click)="navigateTo('spices')" [class.active-link]="isActive('spices')">Spices</a>
-    <a mat-button (click)="navigateTo('blends')" [class.active-link]="isActive('blends')">Blends</a>
-    <a mat-button (click)="navigateTo('contact')" [class.active-link]="isActive('contact')">Contact</a>
-  </nav>
-
-  <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
+    <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 
-<!-- Mobile menu -->
+<!-- Mobile Menu -->
 <mat-nav-list *ngIf="isMobileMenuOpen" class="mobile-menu">
-  <a  routerLink="/" (click)="toggleMenu();gohome()">Home</a>
-  <a  routerLink="/spices" (click)="toggleMenu();gospices()">Spices</a>
-  <a  routerLink="/blends" (click)="toggleMenu();goblends()">Blends</a>
-  <a  routerLink="/contact" (click)="toggleMenu();gocontact()">Contact</a>
+  <!-- <a (click)="toggleMenu(); navigateTo('home')">Home</a> -->
+  <a (click)="toggleMenu(); scrollToSection('home')">Home</a>
+  <a (click)="toggleMenu(); scrollToSection('about')">About Us</a>
+  <a (click)="toggleMenu(); scrollToSection('tea')">Tea</a>
+  <a (click)="toggleMenu(); scrollToSection('spices')">Spices</a>
+  <a (click)="toggleMenu(); scrollToSection('divkit')">Div Kit</a>
+  <a (click)="toggleMenu(); scrollToSection('contact')">Contact us</a>
 </mat-nav-list>

@@ -1,35 +1,174 @@
-<section class="hero">
+<!-- ========== 1️⃣ Hero Carousel Section ========== -->
+<section class="hero" id="home">
   <div class="hero-container">
-    <div class="hero-text">
-      <h1>Bring Indian Warmth to Nordic Winters</h1>
-      <p>Explore traditional Indian spice blends crafted for Scandinavian taste.</p>
-      <button mat-raised-button class="accent">Explore Blends</button>
+    <owl-carousel-o [options]="customOptions" class="carousel-wrapper">
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide>
+          <img [src]="slide.src" [alt]="slide.alt"
+            style="height: 80vh; width: 100%; object-fit: cover; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" />
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</section>
+
+<!-- ========== 2️⃣ About Us Section ========== -->
+<section class="about" id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Good food should make you feel good — and taste amazing.
+        At Kryddalivet, we craft organic spice and tea blends that bring real,
+        vibrant flavor and natural goodness to everyday cooking.
+      </p>
+      <p>Every blend is carefully mixed in small batches using fresh,
+        farm-grown Indian spices, handcrafted in our kitchen in Sweden.
+        We only sell the spices we use ourselves — ones we trust for their quality, taste,
+        and the way they make everyday cooking better and healthier.</p>
+      <p>
+        Kryddalivet began with a family vision — to share the joy of real flavor and make it easy
+        for everyone to cook food that’s pure, delicious, and good for you.
+      </p>
+      <p><b>Our philosophy:</b><br> Pure, organic spices made with clean ingredients that lift every flavor in your
+        cooking.</p>
     </div>
 
-    <div class="hero-image">
-      <img src="assets/garam-masala.jpg" alt="Indian spices" />
+    <div class="about-image">
+      <img src="assets/About.jpeg" alt="About Kradda" />
     </div>
   </div>
 </section>
 
-<section class="cards">
-  <div class="card-grid">
-    <mat-card>
-      <img class="imgbg" src="assets/garam-masala.jpg" alt="Garam Masala" />
-      <mat-card-title>Garam Masala</mat-card-title>
-      <mat-card-content>A warm blend perfect for cozy winter dishes.</mat-card-content>
-    </mat-card>
+<!-- ========== 3️⃣ Product Section ========== -->
+<section class="product-section" id="tea">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/tea.jpeg" alt="Featured Product" />
+    </div>
 
-    <mat-card>
-      <img class="imgbg" src="assets/currymix.jpg" alt="Curry Mix" />
-      <mat-card-title>Curry Mix</mat-card-title>
-      <mat-card-content>Balanced spice for smooth creamy curries.</mat-card-content>
-    </mat-card>
+    <div class="product-details">
+      <h2>Hand-Mixed Indian Chai</h2>
+      <p>
+        A special blend of cardamom and cloves — hand mixed for a real Indian chai experience.
+        Warm, aromatic, and full of flavor in every cup.
+      </p>
+      <!-- <ul>
+        <li>Authentic Indian flavor</li>
+        <li>Hand-picked ingredients</li>
+        <li>Freshly ground and packed</li>
+      </ul> -->
 
-    <mat-card>
-      <img class="imgbg" src="assets/tandoorimix.jpg" alt="Tandoori Spice" />
-      <mat-card-title>Tandoori Spice</mat-card-title>
-      <mat-card-content>Perfect for grilling with a Nordic twist.</mat-card-content>
-    </mat-card>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4 Product Section ========== -->
+<section class="product-section" id="spices">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/Blend.jpeg" alt="Featured Product" />
+    </div>
+
+    <div class="product-details">
+      <h2>Spice Up Your Life – Naturally</h2>
+      <p>
+        A perfect balance of sun-dried coriander, golden turmeric, roasted red chillies,
+        and aromatic cloves — hand-mixed for that authentic Indian warmth in every dish.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5 Product Section ========== -->
+<section class="product-section" id="divkit">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/Div.jpeg" alt="Featured Product" />
+    </div>
+
+    <div class="product-details">
+      <h2>DIY kits</h2>
+      <p>
+        At Kryddalivet, we don’t just sell spices — we share the stories, aromas, and secrets behind them.
+        Join our hands-on cooking sessions to learn how to prepare authentic Indian dishes using our spice
+        mixes and DIY kits.
+      </p>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/tofu.jpeg" alt="Featured Product" />
+    </div>
+
+    <div class="product-details">
+      <h2>Tofu Tikka Masala Spice Mix</h2>
+      <p>
+        All the richness of classic tikka masala — now 100 % plant-based. With notes of cardamom, chili,
+        and paprika, this mix creates a velvety, spicy-sweet curry that pairs beautifully with tofu or vegetables.
+      </p>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/paneertikka.jpeg" alt="Featured Product" />
+    </div>
+
+    <div class="product-details">
+      <h2>Paneer Tikka Masala Spice Mix</h2>
+      <p>
+        A creamy tomato-based curry kissed with aromatic spices.
+        This mix delivers the signature balance of smoky, spicy, and tangy flavors
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="assets/daal.jpeg" alt="Featured Product" />
+    </div>
+
+    <div class="product-details">
+      <h2>Dal Tadka Spice Mix</h2>
+      <p>
+        Golden lentils simmered with cumin, garlic, and a hint of chili — this classic Indian comfort dish brings
+         warmth to every bowl. Our handcrafted mix captures the perfect balance of smoky and aromatic, ready in 
+         minutes for a nourishing meal.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ------Contact Section----- -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-content">
+      <h2>Contact Us</h2>
+
+      <p class="intro-text">
+        Whether you’re a beginner or a food enthusiast, we’ll guide you step-by-step 
+        through real recipes, balanced flavors, and essential techniques. <br /><br />
+        👉 Contact us to book your session and start your journey into the vibrant world 
+        of Indian cooking!
+      </p>
+
+      <div class="contact-details">
+        <p><mat-icon>location_on</mat-icon> Shivaji Nagar, Bhopal - 462016</p>
+        <p><mat-icon>phone</mat-icon> +46727746610</p>
+        <p><mat-icon>email</mat-icon> {{ email }}</p>
+      </div>
+    </div>
   </div>
 </section>

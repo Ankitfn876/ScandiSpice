@@ -26,6 +26,12 @@ export class HeaderComponent {
   onWindowScroll() {
     this.isScrolled = window.scrollY > 50; // add shadow after 50px scroll
   }
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
   // ✅ Simple route navigation & active page tracking
   navigateTo(page: string): void {
     this.currentRoute = page;
@@ -48,6 +54,7 @@ export class HeaderComponent {
     this.route.navigate(['/contact']);
   }
 
+  logo:string="assets/logo.jpeg";
 
 
 }

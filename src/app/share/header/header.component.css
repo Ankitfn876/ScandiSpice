@@ -1,58 +1,71 @@
 .main-toolbar {
   position: fixed;
-  /* Stick to top */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  /* Keep above all content */
   background-color: #fb9700;
-  /* Dark background */
-  color: #fff;
+  color: #222;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 0;
+}
+
+.main-toolbar.scrolled {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 40px;
 }
 
-/* Default - no shadow */
-.main-toolbar:not(.scrolled) {
-  box-shadow: none;
+.logo-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-/* When scrolled - subtle elevation */
-.main-toolbar.scrolled {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.logo-img {
+  height: 64px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 .nav-links a {
-  color: #fff;
-  margin: 0 10px;
+  color: #333;
+  margin: 0 18px;
   font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active-link {
-  color: #fff;
-  background-color: #e58700;
+  color: #d22a2a;
+  border-bottom: 2px solid #d22a2a;
 }
 
 .menu-btn {
-  color: #fff;
+  color: #333;
   display: none;
 }
 
-
-
-@media (max-width: 768px) {
+/* Mobile Responsive */
+@media (max-width: 900px) {
   .nav-links {
     display: none;
   }
@@ -61,37 +74,30 @@
     display: block;
   }
 
-  /* Mobile menu container */
   .mobile-menu {
-    background-color: #efe9e9;
-    /* Light background */
-    padding: 10px 0;
     position: fixed;
-    top: 64px;
-    /* Below toolbar */
+    top: 70px;
     left: 0;
     width: 100%;
-    z-index: 999;
+    background: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    z-index: 999;
   }
 
-  /* Mobile menu links */
   .mobile-menu a {
-    color: #0e0d0d !important;
-    /* Override Angular Material default color */
-    font-weight: 500;
-    text-decoration: none;
-    padding: 12px 20px;
-    display: block;
+    color: #333 !important;
     font-size: 18px;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
   }
 
-  /* Hover effect */
   .mobile-menu a:hover {
-    color: #ff5722 !important;
-    /* Bright hover color */
-    font-size: 19px;
-    transition: all 0.3s ease;
+    background-color: #fafafa;
+    color: #d22a2a !important;
   }
 }
