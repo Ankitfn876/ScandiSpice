@@ -19,7 +19,8 @@ section.hero {
 .hero-container {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0px;
 }
 
 /* 🖼️ Carousel Wrapper */
