@@ -5,14 +5,24 @@
   box-sizing: border-box;
 }
 
+/* ✅ Remove any default gap between sections */
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌄 Hero Section */
 section.hero {
   width: 100%;
-  height: 100vh; /* ✅ Full screen height */
+  height: 68vh; /* Full screen height */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background: #fff8ee;
+  margin: 0;
+  padding: 0;
 }
 
 /* 🧩 Hero Container */
@@ -32,18 +42,18 @@ section.hero {
 .carousel-item {
   position: relative;
   width: 100%;
-  height: 100vh; /* ✅ Full screen slide */
+  height: 100vh;
 }
 
 /* 📸 Image styling */
 .carousel-image {
   width: 100%;
   height: 100vh;
-  object-fit: cover; /* Keeps image proportion */
-  border-radius: 0; /* Full bleed */
+  object-fit: cover;
+  border-radius: 0;
 }
 
-/* 🌫️ Overlay text on image */
+/* 🌫️ Overlay text */
 .carousel-overlay {
   position: absolute;
   bottom: 15%;
@@ -64,7 +74,7 @@ section.hero {
   line-height: 1.5;
 }
 
-/* 🎯 Owl Carousel Navigation Customization */
+/* 🎯 Owl Carousel Navigation */
 .owl-theme .owl-dots .owl-dot span {
   background: #fb9700 !important;
   width: 12px !important;
@@ -82,8 +92,12 @@ section.hero {
   color: #0a3b35 !important;
 }
 
-/* 📱 Responsive adjustments */
+/* 📱 Responsive */
 @media (max-width: 768px) {
+  section.hero {
+  height: 13vh; /* Full screen height */
+  
+}
   .carousel-overlay {
     bottom: 10%;
     left: 5%;
@@ -98,11 +112,11 @@ section.hero {
   }
 }
 
-
 /* ========== 2️⃣ About Section ========== */
 .about {
   background-color: #fdf8f4;
-  padding: 80px 8%;
+  padding: 60px 8%; /* Adjusted for spacing inside, not between sections */
+  margin: 0; /* 🚫 Removes any gap above/below */
 }
 
 .about-container {
@@ -157,6 +171,7 @@ section.hero {
   border-radius: 15px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
+
 
 /* ========== 3️⃣ Product Section ========== */
 .product-section {
