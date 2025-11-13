@@ -14,7 +14,8 @@
 
 .main-toolbar.scrolled {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  background-color: #fb9700;
+  /* background-color: #fb9700; */
+  background-color: #FAF9F6;
 }
 
 .toolbar-container {
