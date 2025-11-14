@@ -15,7 +15,8 @@ section {
 /* 🌄 Hero Section */
 section.hero {
   width: 100%;
-  height: 68vh; /* Full screen height */
+  height: 68vh;
+  /* Full screen height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,9 +96,11 @@ section.hero {
 /* 📱 Responsive */
 @media (max-width: 768px) {
   section.hero {
-  height: 13vh; /* Full screen height */
-  
-}
+    height: 13vh;
+    /* Full screen height */
+
+  }
+
   .carousel-overlay {
     bottom: 10%;
     left: 5%;
@@ -115,8 +118,10 @@ section.hero {
 /* ========== 2️⃣ About Section ========== */
 .about {
   background-color: #fdf8f4;
-  padding: 60px 8%; /* Adjusted for spacing inside, not between sections */
-  margin: 0; /* 🚫 Removes any gap above/below */
+  padding: 60px 8%;
+  /* Adjusted for spacing inside, not between sections */
+  margin: 0;
+  /* 🚫 Removes any gap above/below */
 }
 
 .about-container {
@@ -173,19 +178,108 @@ section.hero {
 }
 
 
-/* ========== 3️⃣ Product Section ========== */
-.product-section {
-  background: linear-gradient(to right, #fff7ec, #ffe3b3);
-  padding: 80px 8%;
+
+/* ========== 3️⃣ Diy Section start ========== */
+.diy-kits {
+  background: linear-gradient(to right, #d6ab85, #8f5a2d);
 }
 
-.product-container {
+.diy-section {
+  padding: 23px 8%;
+}
+.diy-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.diy-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.diy-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+.diy-image img:hover {
+  transform: scale(1.05);
+}
+.diy-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.diy-details h2 {
+  color: #0a3b35;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.diy-details p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.diy-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.diy-details li {
+  margin: 6px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: #222;
+}
+
+.diy-details li::before {
+  content: "✔";
+  color: #fb9700;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+
+  
+  .diy-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .diy-image img {
+    max-width: 350px;
+  }
+}
+
+/* ========== 3️⃣ Diy Section End ========== */
+/* ========== 3️⃣ Product Section ========== */
+.pd-sec{
+background: linear-gradient(to right, #fff7ec, #ffe3b3);
+}
+.product-section {
+  
+  padding: 23px 8%;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
 }
 
 .product-image {
@@ -207,7 +301,7 @@ section.hero {
 }
 
 .product-details {
-  flex: 1;
+ flex: 1;
   min-width: 300px;
 }
 
@@ -246,19 +340,69 @@ section.hero {
   font-weight: 700;
 }
 
-.accent {
-  background-color: #fb9700;
-  color: #fff;
-  font-weight: 600;
-  padding: 10px 25px;
-  border-radius: 8px;
-  transition: 0.3s;
+/* ========== Learn Section ========== */
+.learn-section {
+  background: linear-gradient(to right, #e5e0da, #ce9655);
+  padding: 23px 8%;
+}
+.learn-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
 }
 
-.accent:hover {
-  background-color: #e68a00;
+.learn-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
+.learn-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.learn-image img:hover {
+  transform: scale(1.05);
+}
+
+.learn-details {
+ flex: 1;
+  min-width: 300px;
+}
+
+.learn-details h2 {
+  color: #0a3b35;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.learn-details p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+
+  
+  .learn-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .learn-image img {
+    max-width: 350px;
+  }
+}
 /* ========== Responsive Design ========== */
 @media (max-width: 1024px) {
 
@@ -307,6 +451,7 @@ section.hero {
   }
 
   .about,
+  .diy-section,
   .product-section {
     padding: 60px 6%;
   }
@@ -328,7 +473,8 @@ section.hero {
 
 /* 🏠 Contact Section */
 .contact-section {
-  background-color: #ffffff; /* white background */
+  background-color: #ffffff;
+  /* white background */
   width: 100%;
   padding: 80px 20px;
   display: flex;

@@ -29,7 +29,7 @@ export class HomeComponent {
     },
     nav: true
   };
-email:string='pankaj@gmail.com';
+email:string='realkryddalivet@gmail.com';
   slides = [
     { id: 1, src: 'assets/blends/Blend.jpeg', alt: 'Blend spices' },
     { id: 2, src: 'assets/blends/tea1.png', alt: 'Tea' },
