@@ -8,5 +8,5 @@ import { FormGroup } from '@angular/forms';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
- email:string='pankaj@gmail.com';
+ email:string='realkryddalivet@gmail.com';
 }

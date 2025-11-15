@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LayoutComponent } from './core/layout/layout.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [LayoutComponent],
@@ -7,5 +8,10 @@ import { LayoutComponent } from './core/layout/layout.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = '🌶️ ScandiSpice | Indian Flavors for Nordic Kitchens';
+ 
+  constructor(private router: Router) {
+  if (location.pathname === '/' || location.pathname === '') {
+    this.router.navigate(['/home']);
+  }
+}
 }

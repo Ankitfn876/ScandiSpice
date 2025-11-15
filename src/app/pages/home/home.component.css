@@ -195,6 +195,12 @@ section.hero {
   max-width: 1200px;
   margin: 0 auto;
 }
+.diy-kits h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #0a3b35;
+  margin-bottom: 20px;
+}
 
 .diy-image {
   flex: 1;
@@ -267,6 +273,12 @@ section.hero {
 /* ========== 3️⃣ Product Section ========== */
 .pd-sec{
 background: linear-gradient(to right, #fff7ec, #ffe3b3);
+}
+.pd-sec h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #0a3b35;
+  margin-bottom: 20px;
 }
 .product-section {
   
