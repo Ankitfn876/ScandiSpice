@@ -1,12 +1,20 @@
 <mat-toolbar color="primary" class="main-toolbar" [class.scrolled]="isScrolled">
   <div class="toolbar-container">
     <div class="logo-section" (click)="navigateTo('home')">
-      <span>KRYDDA</span>
-      <!-- <img [src]="logo" alt="KRADDA Logo" class="logo-img" /> -->
+      <!-- <span>KRYDDA</span> -->
+      <img [src]="logo" alt="KRADDA Logo" class="logo-img" />
     </div>
-
-    <nav class="nav-links" *ngIf="!isMobileMenuOpen">
-      <!-- <a mat-button (click)="navigateTo('home')" [class.active-link]="isActive('home')">Home</a> -->
+<nav class="nav-links" *ngIf="!isMobileMenuOpen">
+  <a mat-button (click)="scrollToSection('home')" [class.active-link]="activeSection === 'home'">Home</a>
+  <a mat-button (click)="scrollToSection('about')" [class.active-link]="activeSection === 'about'">About Us</a>
+  <a mat-button (click)="scrollToSection('divkit')" [class.active-link]="activeSection === 'divkit'">Diy Kit</a>
+  <a mat-button (click)="scrollToSection('tea')" [class.active-link]="activeSection === 'tea'">Tea</a>
+  <a mat-button (click)="scrollToSection('spices')" [class.active-link]="activeSection === 'spices'">Spices</a>
+  <a mat-button (click)="scrollToSection('learn')" [class.active-link]="activeSection === 'learn'">Learn Authentic Indian Cooking</a>
+  <a mat-button (click)="scrollToSection('contact')" [class.active-link]="activeSection === 'contact'">Contact us</a>
+</nav>
+    <!-- <nav class="nav-links" *ngIf="!isMobileMenuOpen">
+      <a mat-button (click)="navigateTo('home')" [class.active-link]="isActive('home')">Home</a> 
       <a mat-button (click)="scrollToSection('home')">Home</a>
       <a mat-button (click)="scrollToSection('about')">About Us</a>
       <a mat-button (click)="scrollToSection('divkit')">Diy Kit</a>
@@ -14,10 +22,10 @@
       <a mat-button (click)="scrollToSection('spices')">Spices</a>
       <a mat-button (click)="scrollToSection('learn')">Learn Authentic Indian Cooking</a>
       <a mat-button (click)="scrollToSection('contact')">Contact us</a>
-      <!-- <a mat-button (click)="navigateTo('spices')" [class.active-link]="isActive('spices')">Spices</a> -->
-      <!-- <a mat-button (click)="navigateTo('blends')" [class.active-link]="isActive('blends')">Blends</a> -->
+       <a mat-button (click)="navigateTo('spices')" [class.active-link]="isActive('spices')">Spices</a> 
+       <a mat-button (click)="navigateTo('blends')" [class.active-link]="isActive('blends')">Blends</a> 
      
-    </nav>
+    </nav> -->
 
     <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
       <mat-icon>menu</mat-icon>

@@ -43,7 +43,6 @@
 .logo-img:hover {
   transform: scale(1.05);
 }
-
 .nav-links a {
   color: #333;
   margin: 0 18px;
@@ -61,6 +60,23 @@
   color: #d22a2a;
   border-bottom: 2px solid #d22a2a;
 }
+/* .nav-links a {
+  color: #333;
+  margin: 0 18px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #d22a2a;
+  border-bottom: 2px solid #d22a2a;
+} */
 
 .menu-btn {
   color: #333;
