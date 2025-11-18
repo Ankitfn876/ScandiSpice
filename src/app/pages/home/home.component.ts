@@ -32,7 +32,7 @@ export class HomeComponent {
 email:string='realkryddalivet@gmail.com';
   slides = [
     { id: 1, src: 'assets/blends/Blend.jpeg', alt: 'Blend spices' },
-    { id: 2, src: 'assets/blends/tea1.png', alt: 'Tea' },
+    { id: 2, src: 'assets/blends/tea.jpg', alt: 'Tea' },
     { id: 3, src: 'assets/blends/paneer.jpg', alt: 'Paneer' }
   ];
   ngOnInit(): void {
