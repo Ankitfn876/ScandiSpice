@@ -37,7 +37,7 @@ email:string='realkryddalivet@gmail.com';
   ];
   ngOnInit(): void {
        this.metaService.addTags([
-      { name: 'description', content: 'Discover authentic Indian spice blends adapted for Scandinavian cuisine.' },
+      { name: 'description', content: 'Indian flavours made simple for Scandinavian kitchens — hand-mixed in Stockholm' },
       { name: 'keywords', content: 'Indian spices, Scandinavian food, masala, garam masala, Indian recipes' },
       { name: 'author', content: 'ScandiSpice Team' }
     ]);
